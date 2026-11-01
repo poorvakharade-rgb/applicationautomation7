@@ -3,10 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experiment 7</title>
+  <title>My Automated App 🚀</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe4f1, #e8e4ff, #d4f1ff);
+      color: #333;
+      overflow-x: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Floating circles */
+    .bubble {
+      position: fixed;
+      border-radius: 50%;
+      opacity: 0.35;
+      filter: blur(2px);
+      z-index: 0;
+      background: #ffb3d9;
+      animation: float 12s ease-in-out infinite;
+    }
+    .b1 { width: 180px; height: 180px; top: 5%;  left: 5%; }
+    .b2 { width: 120px; height: 120px; top: 60%; left: 10%; background: #b3c6ff; animation-delay: 2s; }
+    .b3 { width: 220px; height: 220px; top: 15%; right: -40px; background: #c5f5d9; animation-delay: 4s; }
+    .b4 { width: 90px;  height: 90px;  bottom: 8%; right: 15%; background: #ffe0a3; animation-delay: 1s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-25px); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 640px;
+    }
+
+    .rocket {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #6c5ce7;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 34px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Automated deployment with GitHub</h1>
-  <p>This page was deployed automatically.</p>
+  <div class="bubble b1"></div>
+  <div class="bubble b2"></div>
+  <div class="bubble b3"></div>
+  <div class="bubble b4"></div>
+
+  <main class="card">
+    <div class="rocket">🚀</div>
+    <span class="badge">✨ Deployed with GitHub Actions</span>
+    <h1>Hello from GitHub Actions!</h1>
+    <p>Welcome to my first automated deployment project. Every time I push new code to GitHub, my website is automatically deployed. 💜</p>
+    <a class="btn" href="#">Explore My Project</a>
+  </main>
 </body>
 </html>
